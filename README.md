@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lista de Tarefas - To-Do App
 
-## Getting Started
+Este projeto é uma aplicação de lista de tarefas com funcionalidade local e também com integração com uma API fictícia. 
 
-First, run the development server:
+---
 
-```bash
+## Tecnologias Utilizadas
+
+### **Frontend**
+- **TypeScript**: Para tipagem estática e maior segurança no desenvolvimento.
+- **Next.js**: Framework para aplicações React com suporte a rotas dinâmicas e renderização no lado do servidor (SSR).
+- **React.js**: Biblioteca para criação de interfaces de usuário baseadas em componentes.
+- **React Query**: Gerenciamento de estado e chamadas assíncronas à API.
+- **React Hook Form**: Manipulação de formulários com validação.
+- **Zod**: Biblioteca de validação e tipagem para TypeScript.
+- **Tailwind CSS**: Framework de utilitários para estilização de componentes.
+- **React Hot Toast**: Feedback visual de sucesso/erro para ações do usuário.
+- **React Icons**: Conjunto de ícones para melhorar a interface do usuário.
+
+### **Backend Simulado**
+- **JSON Server**: Simulação de uma API REST com endpoints para gerenciamento de tarefas.
+
+---
+
+## Descrição
+
+- **To-Do Local**: Gerencie suas tarefas usando `localStorage`.
+- **Tasks API**: Gerencie tarefas interagindo com uma API fictícia criada com JSON Server.
+
+### Funcionalidades
+1. **Adicionar tarefas** (título e descrição).
+2. **Atualizar tarefas** (somente na lista local).
+3. **Remover tarefas** com confirmação.
+4. **Busca de tarefas** por título.
+5. **Validação dos campos** usando Zod.
+6. **Feedback visual** com notificações (via Toast).
+7. **Indicador de loading** para operações com a API se necessário.
+
+---
+
+## Como Executar
+
+### Pré-requisitos
+- Node.js instalado na máquina.
+
+### Passo 1: Clonar ou configurar o projeto
+Se você baixou ou configurou o projeto manualmente, pule este passo. Certifique-se de que todos os arquivos necessários estão disponíveis.
+
+### Passo 2: Instalar dependências
+No terminal, execute:
+
+npm install
+
+### Passo 3: Inicializar o JSON Server
+npx json-server --watch server.json --port 3001
+
+### Passo 4: Inicializar o projeto Next.js
+Em um novo terminal, execute:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Passo 5: Acessar o projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend (to-do e tasks): http://localhost:3000 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### to-do: http://localhost:3000/to-do
+### tasks: http://localhost:3000/tasks
 
-## Learn More
+JSON Server: http://localhost:3001/tasks
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
