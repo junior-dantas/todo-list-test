@@ -1,4 +1,4 @@
-# Lista de Tarefas - To-Do App
+# Lista de Tarefas - To-Do 
 
 Este projeto é uma aplicação de lista de tarefas com funcionalidade local e também com integração com uma API fictícia. 
 
@@ -61,10 +61,10 @@ npm run dev
 
 ### Passo 5: Acessar o projeto
 
-Frontend (to-do e tasks): http://localhost:3000 
+### Frontend (to-do e tasks): http://localhost:3000 
 
-### to-do: http://localhost:3000/to-do
-### tasks: http://localhost:3000/tasks
+to-do: http://localhost:3000/to-do
+tasks: http://localhost:3000/tasks
 
 JSON Server: http://localhost:3001/tasks
 
